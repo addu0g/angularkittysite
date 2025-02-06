@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td>Filter: 
+            <input type="text" palceholder="filter" [(ngModel)]="selectedfilter"/>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Fact</th>
+    </tr>
+    <tr *ngFor="let fact of filteredCats(selectedfilter)  ">
+        <td>
+            <ng-container>
+                {{fact.fact}}
+            </ng-container>
+        </td>
+    </tr>
+</table>
+
+    

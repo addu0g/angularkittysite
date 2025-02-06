@@ -1,0 +1,20 @@
+<br/>
+<button (click)="queryAI()">Get responses</button>
+
+<table align="center">
+    <tr>
+        <th colspan="2">Answers</th>
+    </tr>
+    <tr *ngFor="let fact of questionResponses">
+        <td>
+            <ng-container>
+                {{fact.question}}
+            </ng-container>
+        </td>
+        <td>
+            <ng-container>
+                {{fact.answer}}
+            </ng-container>
+        </td>
+    </tr>
+</table>
