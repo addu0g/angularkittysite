@@ -3,11 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { CatService } from '../services/cat.service';
 import { Cat } from '../models/cat';
 import { CommonModule } from '@angular/common';
+import { StylusPipe } from '../pipes/stylus.pipe';
 @Component({
   selector: 'app-grid-info',
   templateUrl: './grid-info.component.html',
   styleUrl: './grid-info.component.css',
-  imports:[CommonModule, FormsModule]
+  imports:[CommonModule, FormsModule, StylusPipe]
 })
 
 export class GridInfoComponent implements OnInit {

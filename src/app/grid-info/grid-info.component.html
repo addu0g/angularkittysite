@@ -12,7 +12,7 @@
     <tr *ngFor="let fact of filteredCats(selectedfilter)  ">
         <td>
             <ng-container>
-                {{fact.fact}}
+                <div [outerHTML]="fact.fact | stylus "></div>
             </ng-container>
         </td>
     </tr>
