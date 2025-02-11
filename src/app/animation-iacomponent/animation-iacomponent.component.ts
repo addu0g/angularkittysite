@@ -33,7 +33,7 @@ export class AnimationIAComponentComponent {
 
   queryAI = async() => {
     
-    const genAI = new GoogleGenerativeAI("");
+    const genAI = new GoogleGenerativeAI("AIzaSyDttUl0-U7dOcP4d_g5z_zed7G2L5JWyyw");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     const facts =this.catsFacts.map(fact => fact.fact);

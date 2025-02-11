@@ -1,0 +1,26 @@
+
+<br/>
+<p style="color:red">The facts added won't persist</p>
+<label for="fact">
+    New Cat fact:
+    <input id="fact" type="text" [formControl]="newfact" required />
+    <span *ngIf="newfact.touched && newfact.invalid" style="color:red">
+        *
+    </span>
+</label>
+<button (click)="addFact()">Add</button>
+<table>
+    <tr>
+        <th>Fact</th>
+    </tr>
+    <tr *ngFor="let fact of catsFacts">
+        <td>
+            <ng-container>
+                <div [outerHTML]="fact.fact"></div>
+            </ng-container>
+        </td>
+    </tr>
+</table>
+
+
+
